@@ -7,17 +7,18 @@ import { ContactResolve } from './contact.resolve';
 import { ContactsService } from './contacts.service';
 import { ContactsListComponent } from './contacts-list.component';
 import { ContactsDetailComponent } from './contacts-detail.component';
+import { RxjsComponent } from './rxjs.component';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(AppRoutes)],
-  declarations: [AppComponent, ContactsListComponent, ContactsDetailComponent],
+  declarations: [AppComponent, ContactsListComponent, ContactsDetailComponent, RxjsComponent],
   bootstrap: [AppComponent],
   providers: [
     ContactsService,
     ContactResolve
   ]
 })
-export class AppModule {}
+export class AppModule { }
 
 /*
 Copyright 2016 thoughtram GmbH. All Rights Reserved.
