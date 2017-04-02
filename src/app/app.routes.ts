@@ -3,6 +3,7 @@ import { ContactsListComponent } from './contacts-list.component';
 import { ContactsDetailComponent } from './contacts-detail.component';
 import { ContactResolve } from './contact.resolve';
 import { RxjsComponent } from './rxjs.component';
+import { DecoratorComponent } from './decorators.component';
 
 export const AppRoutes: Routes = [
   { path: '', component: ContactsListComponent },
@@ -15,7 +16,7 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'rxjs', component: RxjsComponent
-  }
+  }, { path: 'decorator', component: DecoratorComponent }
 ];
 
 

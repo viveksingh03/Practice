@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, DoCheck } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -8,10 +8,11 @@ import { ContactsService } from './contacts.service';
 import { ContactsListComponent } from './contacts-list.component';
 import { ContactsDetailComponent } from './contacts-detail.component';
 import { RxjsComponent } from './rxjs.component';
+import { DecoratorComponent } from './decorators.component';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(AppRoutes)],
-  declarations: [AppComponent, ContactsListComponent, ContactsDetailComponent, RxjsComponent],
+  declarations: [AppComponent, ContactsListComponent, ContactsDetailComponent, RxjsComponent, DecoratorComponent],
   bootstrap: [AppComponent],
   providers: [
     ContactsService,

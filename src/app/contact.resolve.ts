@@ -4,9 +4,9 @@ import { ContactsService } from './contacts.service';
 
 @Injectable()
 export class ContactResolve implements Resolve<any> {
-  
-  constructor(private contactsService: ContactsService) {}
-  
+
+  constructor(private contactsService: ContactsService) { }
+
   resolve(route: ActivatedRouteSnapshot) {
     return this.contactsService.getContact(route.params['id']);
   }

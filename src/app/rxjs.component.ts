@@ -2,18 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { Pipe, PipeTransform, AfterViewChecked } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { Observable, Subscription } from 'rxjs/Rx'
+import { readonly } from 'core-decorators';
+
 @Component({
     selector: 'selector',
     templateUrl: './rxjs.component.html'
 })
+
 export class RxjsComponent implements OnInit, AfterViewChecked {
 
     constructor() {
+
+       
+
     }
 
     ngAfterViewChecked() {
-        this.CallRXJS();
+        // this.CallRXJS();
     }
+
 
     CallRXJS() {
 
@@ -45,26 +52,35 @@ export class RxjsComponent implements OnInit, AfterViewChecked {
         // });
         // console.log('just after subscribe');
 
-        var obs = Observable.interval(20000).take(1)
-            .do(i => console.log("obs value " + i));
+        // var obs = Observable.interval(2000).take(1)
+        //     .do(i => console.log("obs value " + i));
 
-        var sub1 = obs.subscribe(value => console.log("observer 1 received " + value));
+        // var sub1 = obs.subscribe(value => console.log("observer 1 received " + value));
 
-        
+
         // Observable.interval(3000).take(1).do(() => { 
         //     sub1.unsubscribe();
         //     console.log("unsubscribed");
-            
+
         // });
-        
+
         // sub1.unsubscribe();
 
-        // obs.subscribe(value => console.log("observer 2 received " + value));
+        // // obs.subscribe(value => console.log("observer 2 received " + value));
+        // let t = new Test();
+        // // console.log(t.name);
+        // t.read = 'aasdadad';
+        // console.log(t.read);.
+
+
 
     }
 
+
+
     ngOnInit() { }
 }
+
 
 
 // let myDate = "2017-01-23T14:09:19+0100";
